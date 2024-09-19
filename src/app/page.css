@@ -1,0 +1,110 @@
+body {
+  overflow: hidden;
+}
+#Pallete {
+  background-color: rgb(219, 219, 219);
+  height: 70px;
+  min-width: 70px;
+  max-width: 600px;
+  border-radius: 16px;
+  gap: 40px;
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 3rem;
+  transition: max-width cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+  padding: 10px;
+
+  hr {
+    height: 40%;
+    background-color: black;
+    border-radius: 10px;
+    width: 2px;
+    border: none;
+  }
+  #colors {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 10px;
+    #RandomColors {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+
+      transition: all 0.3s cubic-bezier(0.19, 0.32, 0.39, 1.67);
+
+      &:hover {
+        font-size: 1.8rem;
+      }
+    }
+    .circleColor {
+      height: 45px;
+      scale: 0.7;
+      aspect-ratio: 1;
+      border: 4px dashed #858585;
+      border-radius: 100%;
+      transition: all 0.3s cubic-bezier(0.19, 0.32, 0.39, 1.67);
+      &:hover {
+        scale: 1;
+      }
+    }
+    .Changed {
+      border: none;
+    }
+  }
+  #GrabLocal {
+    font-size: 3rem;
+  }
+}
+#ActionsButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  .Actions {
+    height: 45px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: all 0.3s cubic-bezier(0.19, 0.32, 0.39, 1.67);
+
+    &:hover {
+      font-size: 2.5rem;
+    }
+  }
+}
+#whiteBoard {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: white;
+  cursor: url("../../public/pngwing.com(1).png") 4 0, auto;
+}
+#whiteBoard .close {
+  display: none;
+}
+#ActualColor {
+  height: 20px;
+  aspect-ratio: 1;
+  background-color: none;
+  border-radius: 100%;
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  &:hover {
+    height: 25px;
+  }
+}
+
+canvas {
+  background-color: white;
+}
